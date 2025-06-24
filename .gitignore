@@ -1,5 +1,6 @@
 
 ###> symfony/framework-bundle ###
+.env
 /.env.local
 /.env.local.php
 /.env.*.local
@@ -19,8 +20,8 @@
 /assets/vendor/
 ###< symfony/asset-mapper ###
 .idea
-var
-vendor
+var/
+vendor/
 .php_cs.cache
 .php-cs-fixer.cache
 .phpunit.result.cache
