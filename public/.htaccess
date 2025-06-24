@@ -1,0 +1,17 @@
+# ➤ Jeśli adres jest dokładnie katalogiem (czyli /walletApp/), przekieruj na /login
+#RewriteCond %{REQUEST_URI} ^/~23_hutsaylyuk/walletApp/?$
+#RewriteRule ^$ /~23_hutsaylyuk/walletApp/login [R=302,L]
+
+<IfModule mod_rewrite.c>
+    Options -MultiViews
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    <IfModule mod_alias.c>
+        RedirectMatch 302 ^/$ /index.php/
+    </IfModule>
+</IfModule>
+
